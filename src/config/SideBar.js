@@ -80,6 +80,27 @@ const sidebarMenu = [
             //     ]
             // },
         ],
+    },
+    {
+        name: "My Campaign",
+        options: {
+            addDivider: {class: 'menu-divider mt-3'}
+        },
+        items: [
+            {path: '/preview_campaign', title: 'Preview Campaign'},
+            {path: '/campaign_edit', bgImg:'p-1 bg-gray-900 bg-opacity-80', title: 'Campaign Editor',
+                children: [
+                    { path: '/campaign_edit/basics', title: 'Basics' },
+                    { path: '/campaign_edit/content', title: 'Content' },
+                    { path: '/campaign_edit/perks', title: 'Perks' },
+                    { path: '/campaign_edit/team', title: 'Team' },
+                    { path: '/campaign_edit/funding', title: 'Funding' },
+                    // { path: '/campaign_edit/extras', title: 'Extras' },
+                    { path: '/campaign_edit/settings', title: 'Settings' },
+                ]
+            },
+           
+        ]
     }
 ];
 

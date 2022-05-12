@@ -14,6 +14,14 @@ import RefineryFaucet from "../pages/Refinery/Faucet";
 import HNWAntiBot from "../pages/Launchpad/AntiBot";
 import HfuelMigrate from "../pages/Hfuel/Migrate";
 
+import CampaignBasics from "../pages/Campaign/Basics.vue";
+import CampaignContent from "../pages/Campaign/Content.vue";
+import CampaignPerks from "../pages/Campaign/Perks.vue";
+import CampaignTeam from "../pages/Campaign/Team.vue";
+import CampaignFunding from "../pages/Campaign/Funding.vue";
+// import CampaignExtras from "../pages/Campaign/Extras.vue";
+import CampaignSettings from "../pages/Campaign/Settings.vue";
+
 const routes = [
   { path: "*", redirect: "/dashboard" },
   { path: "/dashboard", component: DashboardHub },
@@ -30,6 +38,13 @@ const routes = [
   { path: "/ruyi/presale", component: Presale },
   { path: "/refinery/pipeline", component: RefineryFaucet },
   { path: "/hfuel/migrate", component: HfuelMigrate },
+  { path: "/campaign_edit/basics", component: CampaignBasics },
+  { path: "/campaign_edit/content", component: CampaignContent },
+  { path: "/campaign_edit/perks", component: CampaignPerks },
+  { path: "/campaign_edit/team", component: CampaignTeam },
+  { path: "/campaign_edit/funding", component: CampaignFunding },
+  // { path: "/campaign_edit/extras", component: CampaignExtras },
+  { path: "/campaign_edit/settings", component: CampaignSettings },
 ];
 
 export default routes;
