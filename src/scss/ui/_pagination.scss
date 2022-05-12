@@ -1,0 +1,5 @@
+.pagination {
+	font-weight: $pagination-font-weight;
+	
+	@include flex-wrap(wrap);
+}

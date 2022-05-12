@@ -1,0 +1,338 @@
+{
+  "Native": {
+    "chainID": {
+      "56": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "97": "0x094616f0bdfb0b526bd735bf66eca0ad254ca81f"
+    },
+    "abi": "IERC20",
+    "root": "Native"
+  },
+  "HNW": {
+    "chainID": {
+      "56": "0x8173CcC721111b5a93CE7fa6fEc0fc077B58B1B7",
+      "97": "0x37ce17ea417d17f33207f3729c793ba0dc59f66d"
+    },
+    "abi": "ROOTToken",
+    "root": "HNW"
+  },
+  "xHNW": {
+    "chainID": {
+      "56": "0xaF4f67A1ed4fB3952ae3dF84ac2ca190E37a43F1",
+      "97": "0x4dc46C3c81e63Ee2a5F3676854eC41609a9D7724"
+    },
+    "abi": "StakingToken",
+    "root": "HNW"
+  },
+  "HFUEL": {
+    "chainID": {
+      "56": "0x157Ba4bBbb2bd7D59024143C2C9E08f6060717a6",
+      "97": "0x360bCB145d34Bfd75aD7Eb6690774c4d5b7Ffc9c"
+    },
+    "abi": "HfuelRoot",
+    "root": "HFUEL"
+  },
+  "xHFUEL": {
+    "chainID": {
+      "56": "0x0aC8A7C853Ff867380D5f4847D4DFA6ECB965645",
+      "97": "0x0aC8A7C853Ff867380D5f4847D4DFA6ECB965645"
+    },
+    "abi": "StakingToken",
+    "root": "HFUEL"
+  },
+  "xHFUELV1": {
+    "chainID": {
+      "56": "0x0aC8A7C853Ff867380D5f4847D4DFA6ECB965645",
+      "97": "0x0aC8A7C853Ff867380D5f4847D4DFA6ECB965645"
+    },
+    "abi": "StakingToken",
+    "root": "HFUELV1"
+  },
+  "HFUELV1": {
+    "chainID": {
+      "56": "0x2B562F6d6E302692b5D681e75c187e79c8f5d7a7",
+      "97": "0x6c4D24b7DdA96fB0eEdDF083A8DC0cEF590C07A1"
+    },
+    "abi": "HfuelRoot",
+    "root": "HFUELV1"
+  },
+  "OLDHFUEL": {
+    "chainID": {
+      "56": "0x2B562F6d6E302692b5D681e75c187e79c8f5d7a7",
+      "97": "0x6c4D24b7DdA96fB0eEdDF083A8DC0cEF590C07A1"
+    },
+    "abi": "HfuelRoot",
+    "root": "OLDHFUEL"
+  },
+  "HFUELGATE": {
+    "chainID": {
+      "56": "0x4F475CCE3994718f31d37F9A87C19ac31eEfe407",
+      "97": "0xDA2B00bA64ccd64d6310f7053cDC569469D70531"
+    },
+    "abi": "HfuelGate",
+    "root": "HFUEL"
+  },
+  "HNWNFT": {
+    "chainID": {
+      "56": "0x33F44ea59D7A738F09fcba5f67Da642C8d212F41"
+    },
+    "abi": "NFTFeeClaim",
+    "root": "HNW"
+  },
+  "BUSD": {
+    "chainID": {
+      "56": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "97": "0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee",
+      "137": "0xdab529f40e671a1d4bf91361c21bf9f0c9712ab7"
+    },
+    "abi": "IERC20",
+    "root": "BUSD"
+  },
+  "BNB": {
+    "chainID": {
+      "56": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "97": "0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee",
+      "137": "0xdab529f40e671a1d4bf91361c21bf9f0c9712ab7"
+    },
+    "abi": "IERC20",
+    "root": "BNB"
+  },
+  "HBRONZE": {
+    "chainID": {
+      "56": "0x9CB85249bE538D937D9D5e60F9650fB2F1877b4a",
+      "97": "0x9D0e2c55e0eEBD3669d7efF491AacE4D3f69367c"
+    },
+    "abi": "HobbNFT",
+    "root": "HNW"
+  },
+  "HSILVER": {
+    "chainID": {
+      "56": "0xB73bB5E1f8B6449546e51A820D762e28e02bd3E8",
+      "97": "0x35D210bC28773eEb8c91f26fC5668b51A54F0439"
+    },
+    "abi": "HobbNFT",
+    "root": "HNW"
+  },
+  "HGOLD": {
+    "chainID": {
+      "56": "0x09862Ca210050F700a45F728C50fFfcD9C0bc0dD",
+      "97": "0x39Fc09FFc50e6932854eBd57e10Ecb81D1d988Ce"
+    },
+    "abi": "HobbNFT",
+    "root": "HNW"
+  },
+  "HPLATINUM": {
+    "chainID": {
+      "56": "0x1Dd6d87beA19829EFbEaB06332EC17c51F1cd41f",
+      "97": "0xe8a47F3012BD629fe9ABE536A9Ec172065872805"
+    },
+    "abi": "HobbNFT",
+    "root": "HNW"
+  },
+  "HOBSIDIAN": {
+    "chainID": {
+      "56": "0x49890c6B27f8e6E107292896d19Fc0eb91B2535e",
+      "97": "0xfb94dd92f8a91d941E589CB211E11846a6207aeA"
+    },
+    "abi": "HobbNFT",
+    "root": "HNW"
+  },
+  "MGEHFUELDIS": {
+    "chainID": {
+      "56": "0x2a1A42D6913dDA72d5F1B5d41a32C0A79Cd47759",
+      "97": "0x30a5f2331cc658ca1d2b2c90f71655d93374eda0"
+    },
+    "abi": "HfuelMarketDistribution",
+    "root": "BUSD"
+  },
+  "MGEHFUELGEN": {
+    "chainID": {
+      "56": "0x9E0a34fC84673c18b6F208296dE4aFc209eaEf52",
+      "97": "0x853045a92359a3e30104b9e8B9A4B2A09d5a4C5d"
+    },
+    "abi": "MGEGEN",
+    "root": "BUSD"
+  },
+  "MGERUYIGEN": {
+    "chainID": {
+      "56": "0x69a5439366F265857cAc20568E303bB7b9ff5Ab4",
+      "97": "0xDf135b7e4519707f72566e46FF84ab2066b13525"
+    },
+    "abi": "RuyiMarketGenerator",
+    "root": "BUSD"
+  },
+  "Pancakeswap": {
+    "chainID": {
+      "56": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+      "97": "0xD99D1c33F9fC3444f8101754aBC46c52416550D1"
+    },
+    "abi": "PoolFactory",
+    "root": "Pancakeswap"
+  },
+  "PCSTestnet": {
+    "chainID": {
+      "97": "0x9Ac64Cc6e4415144C455BD8E4837Fea55603e5c3"
+    },
+    "abi": "PoolFactory",
+    "root": "PCSTestnet"
+  },
+  "PoolFactory": {
+    "chainID": {
+      "56": null,
+      "97": "0x1b7d906F79Ce346683552262774400080826f1E2"
+    },
+    "implementation": {
+      "56": null,
+      "97": "0x53d21575d0687C868E8A266072578f9f209061b2"
+    },
+    "abi": "PoolFactory",
+    "root": "PoolFactory"
+  },
+  "Pool": {
+    "chainID": {
+      "56": null,
+      "97": "0xE7e0AfD8a164e1C3D6f119c7Ba1B5A67532aa1FD"
+    },
+    "abi": "Pool",
+    "root": "Pool"
+  },
+  "PoolFactoryWithToken": {
+    "chainID": {
+      "56": null,
+      "97": "0x1699D0C06efC09b3A4B682F90b5bCd7DD6De3C10"
+    },
+    "implementation": {
+      "56": null,
+      "97": "0x2b6e31A87ABdFC901605C4983a594E82F03a657F"
+    },
+    "abi": "PoolFactoryWithToken",
+    "root": "PoolFactoryWithToken"
+  },
+  "PoolWithToken": {
+    "chainID": {
+      "56": null,
+      "97": "0xb6eaea094b7a0026383f83324aa0fb17a032afb5"
+    },
+    "abi": "PoolWithToken",
+    "root": "PoolWithToken"
+  },
+  "FairLaunchFactory": {
+    "chainID": {
+      "56": null,
+      "97": "0x823C1221807aAAe89cA17b65117734C58F46608f"
+    },
+    "implementation": {
+      "56": null,
+      "97": "0x85526dBae9006B4c8a04b369bfa9db6904847B66"
+    },
+    "abi": "FairLaunchFactory",
+    "root": "FairLaunchFactory"
+  },
+  "FairLaunch": {
+    "chainID": {
+      "56": null,
+      "97": "0x017E76f08261a3F310a50c80C65a6e80dF158E10"
+    },
+    "abi": "FairLaunch",
+    "root": "FairLaunch"
+  },
+  "StandardTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0x84c9BD4A289C3C686296974d98ab9061Bd04Aa27"
+    },
+    "abi": "StandardTokenFactory"
+  },
+  "AntiBotStandardTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0x36220040f48849b7C1B31C99204cBb4FE3f0E114"
+    },
+    "abi": "AntiBotStandardTokenFactory"
+  },
+  "LiquidityGeneratorTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0x8C51118CEC65321C0235EFfFfCB97F537b7f7e88"
+    },
+    "abi": "LiquidityGeneratorTokenFactory"
+  },
+  "AntiBotLiquidityGeneratorTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0x869CD718FFD14De56F9D820c9D61fC669bd1aEB0"
+    },
+    "abi": "AntiBotLiquidityGeneratorTokenFactory"
+  },
+  "BabyTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0xF7Df5691Cf04ef17DbD918b34fD357e7ca06a7D8"
+    },
+    "abi": "BabyTokenFactory"
+  },
+  "AntiBotBabyTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0xE9E3b8E7A6a792082206A62A87C4Be354fC6EA23"
+    },
+    "abi": "AntiBotBabyTokenFactory"
+  },
+  "BuyBackBabyTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0x7F4A26fFb590A49B0665a2Ab06f8d5F43051661C"
+    },
+    "abi": "BuyBackBabyTokenFactory"
+  },
+  "AntiBotBuyBackBabyTokenFactory": {
+    "chainID": {
+      "56": "",
+      "97": "0xace0621F03c315e00Cfc7E02dA38Cb4e6E3ed718"
+    },
+    "abi": "AntiBotBuyBackBabyTokenFactory"
+  },
+  "AntiBotConfig": {
+    "chainID": {
+      "56": "",
+      "97": "0x2a94f63f00f2898F954868a885C27bD3174172AC"
+    },
+    "abi": "AntiBotConfig"
+  },
+  "Refinery": {
+    "chainID": {
+      "56": "0xc8A79838D91f0136672b94ec843978B6Fa6DF07D",
+      "97": "0x5104E3933a26567C6DF7B0436575932c615b6Ea2"
+    },
+    "abi": "Refinery"
+  },
+  "TokenMint": {
+    "chainID": {
+      "56": "0x97C8Ce48a156fb6350dB02b4B9faa5952a8D6032",
+      "97": "0x15dF0E480Ee6810fF329353d24e31107ac5789b9"
+    },
+    "abi": "TokenMint"
+  },
+  "BuddySystem": {
+    "chainID": {
+      "56": "0x7B8327aB8075B1B62d8AC5b4652C1391CfFd0Bb6",
+      "97": "0x9369060CE57A0fa04013798bE95Efc5489Eb4459"
+    },
+    "abi": "BuddySystem"
+  },
+  "SK": {
+    "chainID": {
+      "56": "0x5755e18d86c8a6d7a6e25296782cb84661e6c106",
+      "97": "0x4AaDA75e350eAf922aF07E70E3F4978b499C0E99"
+    },
+    "abi": "SKToken",
+    "root": "SK"
+  },
+  "xSK": {
+    "chainID": {
+      "56": "0xA74Ce0F84d3F6dF9DAe2967a8Cfa645bF6693195",
+      "97": "0x4AaDA75e350eAf922aF07E70E3F4978b499C0E99"
+    },
+    "abi": "StakingToken",
+    "root": "SK"
+  }
+}

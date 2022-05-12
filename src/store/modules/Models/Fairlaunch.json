@@ -1,0 +1,39 @@
+{
+    "token": {
+        "address": null,
+        "name": null,
+        "symbol": null,
+        "decimals": null,
+        "allowance": null,
+        "totalSupply": null
+    },
+    "estimateTokens": null,
+    "sellingAmount": null,
+    "softCap": null,
+    "router": null,
+    "liquidity": null,
+    "startTime": null,
+    "endTime": null,
+    "liquidityLock": null,
+    "isVestingTeam": false,
+    "vestingTeamTotalTokens": null,
+    "vestingTeamMinutesRelease": null,
+    "vestingTeamFirstPercentageRelease": null,
+    "vestingTeamCycleMinutes": null,
+    "vestingTeamCyclePercentage": null,
+    "logoUrl": null,
+    "website": null,
+    "facebook": null,
+    "twitter": null,
+    "github": null,
+    "telegram": null,
+    "instagram": null,
+    "discord": null,
+    "reddit": null,
+    "description": null,
+    "flags": {
+        "isValid": false,
+        "isLoading": false,
+        "approve": null
+    }
+}

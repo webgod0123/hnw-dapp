@@ -1,0 +1,70 @@
+#teamairdrop select option {
+  background-color: #4c4f54;
+}
+#teamairdrop textarea {
+  resize: vertical;
+  width: 100%;
+  background-color: #4c4f54;
+  height: unset !important;
+}
+
+.deposit-btn {
+  background-color: #fcc506;
+}
+.roll-btn {
+  background-color: #8c65bd;
+}
+.claim-btn {
+  background-color: #d3d4d6;
+}
+.box-height {
+  min-height: 170px;
+}
+.refinery-icons {
+  display: block;
+  width: 70px;
+  margin: auto;
+
+  img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.meta-btn {
+  padding: 0;
+  margin-left: 10px;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 780px) {
+  .box-height {
+    min-height: 210px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .refinery-icons {
+    width: 150px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .box-height {
+    min-height: 50px;
+  }
+
+  .refinery-icons {
+    width: 50;
+    margin: auto;
+
+    img {
+      height: 50%;
+      width: 50%;
+      padding: 10px;
+    }
+  }
+}

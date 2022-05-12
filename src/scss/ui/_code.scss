@@ -1,0 +1,8 @@
+code {
+	padding: $code-padding-y $code-padding-x;
+	font-size: $code-font-size;
+	color: $code-color;
+	background-color: $code-bg;
+	
+	@include border-radius($code-border-radius);
+}

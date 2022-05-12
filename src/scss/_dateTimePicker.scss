@@ -1,0 +1,54 @@
+.vdp-datepicker__calendar {
+    background-color: rgba(59,59,59,0.97) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    border-radius: 6px !important;
+	
+	& header {
+
+        & span {
+            
+            &:hover {
+                background-color: $primary !important;
+            }
+
+            &.prev {
+                border-top-left-radius: 6px !important;
+
+                &::after {
+                    border-right: 10px solid #fff !important;
+                }
+            }
+
+            &.next {
+                border-top-right-radius: 6px !important;
+
+                &::after {
+                    border-left: 10px solid #fff !important;
+                }
+            }
+        }
+    }
+
+    & .cell {
+
+        &:not(.blank):not(.disabled).day {
+            &:hover {
+                border-color: $primary !important;
+            }
+        }
+        &:not(.blank):not(.disabled).month {
+            &:hover {
+                border-color: $primary !important;
+            }
+        }
+        &:not(.blank):not(.disabled).year {
+            &:hover {
+                border-color: $primary !important;
+            }
+        }
+
+        &.selected {
+            background-color: $primary !important;
+        }
+    }
+}

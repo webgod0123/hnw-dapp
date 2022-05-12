@@ -1,0 +1,19 @@
+@font-face {
+    font-family:"fram-s";
+    src:url("./fonts/FramS.woff2") format("woff2"),url("./fonts/FramS.woff") format("woff"),url("./fonts/FramS.ttf") format("ttf");
+    font-display:auto;
+    font-style:normal;
+    font-weight:500;
+}
+
+.ft-fram-s { font-family: "fram-s",sans-serif; }
+
+@font-face {
+    font-family:"fram-l";
+    src:url("./fonts/FramL.woff2") format("woff2"),url("./fonts/FramL.woff") format("woff"),url("./fonts/FramL.ttf") format("ttf");
+    font-display:auto;
+    font-style:normal;
+    font-weight:500;
+}
+
+.ft-fram-l { font-family: "fram-l",sans-serif; }

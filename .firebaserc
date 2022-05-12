@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "hnetworking-28b01",
+    "staging": "hnw-dapp-staging"
+  },
+  "targets": {}
+}

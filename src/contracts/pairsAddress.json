@@ -1,0 +1,60 @@
+{
+    "BUSDHNW": {
+        "type": "liquidityPool",
+        "address": "0x4436d1789f16dEB0322e9800844061911218f7C1",
+        "chainID": {
+            "56": "0x4436d1789f16dEB0322e9800844061911218f7C1"
+        },
+        "tokens": ["BUSD", "HNW"]
+    },
+    "BNBSK": {
+        "type": "liquidityPool",
+        "address": "0xdf16b952cf4dd07d3649ab2a64930e3c41aac82f",
+        "chainID": {
+            "56": "0xdf16b952cf4dd07d3649ab2a64930e3c41aac82f"
+        },
+        "tokens": ["BNB", "SK"]
+    },
+    "BUSDHFUEL": {
+        "type": "liquidityPool",
+        "address": "0x8196Fd25E639FD57a6678D2143E86b7F023875BE",
+        "chainID": {
+            "56": "0x8196Fd25E639FD57a6678D2143E86b7F023875BE"
+        },
+        "tokens": ["BUSD", "HFUEL"]
+    },
+    "BUSDHFUELV1": {
+        "type": "liquidityPool",
+        "address": "0xfA2DBF79518258e82476083f208e98Cb9bdddBD3",
+        "chainID": {
+            "56": "0xfA2DBF79518258e82476083f208e98Cb9bdddBD3"
+        },
+        "tokens": ["BUSD", "HFUEL"]
+    },
+    "HNWxHNW": {
+        "type": "xStake",
+        "address": null,
+        "tokens": ["HNW", "xHNW"]
+    },
+    "SKxSK": {
+        "type": "xStake",
+        "address": null,
+        "tokens": ["SK", "xSK"]
+    },
+    "HFUELxHFUEL": {
+        "type": "xStake",
+        "address": null,
+        "tokens": ["HFUEL", "xHFUEL"]
+    },
+    "HFUELV1xHFUELV1": {
+        "type": "xStake",
+        "address": null,
+        "tokens": ["HFUELV1", "xHFUELV1"]
+    },
+    "BUSDBNB": {
+        "type": "coingecko",
+        "address": null,
+        "url": "https://api.coingecko.com/api/v3/simple/price?ids=wbnb&vs_currencies=usd",
+        "tokens": []
+    }
+}

@@ -1,0 +1,36 @@
+b-form-spinbutton form-control d-inline-flex flex-column b-time-minutes,
+b-form-spinbutton form-control.focus d-inline-flex flex-column b-time-minutes {
+    color: var(--app-component-color);
+}
+
+.form-control.focus {
+    color: var(--bs-primary);
+    background-color: var(--app-component-bg);
+}
+
+.dropdown-menu{
+    z-index: 900;
+}
+
+
+.flip-card {
+    font-size: 1.60rem !important;
+    line-height: 0.95 !important;
+    padding-bottom: 0.72em !important;
+}
+
+.flip-clock__slot {
+    font-size: 10px !important;
+}
+
+.flip-card__top,
+.flip-card__bottom,
+.flip-card__back-bottom,
+.flip-card__back::before,
+.flip-card__back::after {
+    color: $secondary !important;
+}
+
+.disabled:hover {
+    cursor:not-allowed !important;
+}

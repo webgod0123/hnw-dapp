@@ -1,0 +1,17 @@
+.form-switch .form-check-input {
+	background-image: var(--form-switch-bg-image);
+}
+.form-check-input,
+.form-control,
+.form-select,
+.form-range {
+	@include appearance(none);
+}
+.form-range {
+	&::-webkit-slider-thumb {
+		@include appearance(none);
+	}
+	&::-moz-range-thumb {
+		@include appearance(none);
+	}
+}

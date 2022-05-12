@@ -1,0 +1,1282 @@
+@import 'styles';
+
+/* Dropdown Menu */
+.dropdown {
+	& .dropdown-menu {
+		&:focus {
+			outline: none;
+		}
+	}
+	& .dropdown-toggle-split {
+		@include fontawesome();
+	
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 0;
+			vertical-align: middle;
+			border-top: 4px dashed;
+			border-top: 4px solid\9;
+			border-right: 4px solid transparent;
+			border-left: 4px solid transparent;
+		}
+	}
+}
+
+
+/* Widget Chart */
+.nvd3-svg {
+	 .widget-chart-full-width & {
+		margin: 0 -25px !important;
+		padding: 0 !important;
+		width: calc(100% + 100px) !important;
+		height: calc(100% + 30px) !important;
+	}
+	.nv-stacked-area-chart & {
+		width: calc(100% + 12%) !important;
+	}
+	.widget-chart-sidebar & {
+		margin: -25px !important;
+		width: calc(100% + 50px) !important;
+		height: calc(100% + 50px) !important;
+	}
+}
+
+
+/* Vue Calendar */
+.__vev_calendar-wrapper {
+	& .cal-wrapper {
+		width: auto;
+		padding: $spacer;
+		
+		& .cal-header {
+			padding-bottom: $spacer;
+			background: none;
+			
+			& > div {
+				padding: rem(1px);
+			}
+			& .title {
+				font-size: $font-size-lg;
+				font-weight: $font-weight-bold;
+				color: var(--app-component-color);
+			}
+			& .icon {
+				color: rgba(var(--app-component-color-rgb), .5);
+				
+				&:hover {
+					color: var(--app-component-color);
+				}
+			}
+		}
+		& .cal-body {
+			& .weeks {
+				margin-bottom: $spacer / 2;
+				
+				& .item {
+					font-weight: $font-weight-bold;
+					font-size: $font-size-base;
+					color: var(--app-component-color);
+					line-height: rem(20px);
+				}
+			}
+			& .dates {
+				& .item {
+					& .is-today {
+						width: rem(4px);
+						background: var(--app-component-active-bg) !important;
+						color: var(--app-component-active-color);
+						margin-top: rem(10px);
+						
+						@if $enable-rtl {
+							margin-right: rem(-2px);
+						} @else {
+							margin-left: rem(-2px);
+						}
+					}
+					&.event {
+						& .date-num {
+							color: var(--app-component-color) !important;
+						}
+						& .is-event {
+							background: var(--app-component-hover-bg) !important;
+							border-color: var(--app-component-hover-bg) !important;
+						}
+						&.selected-day {
+							& .date-num {
+								color: $white !important;
+							}
+							& .is-event {
+								background: $gray-900 !important;
+								border-color: $gray-900 !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		& .date-num {
+			font-size: rem(13px) !important;
+			line-height: rem(30px);
+		}
+	}
+	& .events-wrapper {
+		display: none;
+	}
+}
+
+
+/* Vue Editor */
+.vueditor {
+	border: none;
+	background: var(--app-component-bg);
+	
+	& .ve-toolbar {
+		border-bottom: 1px solid var(--app-component-boder-color) !important;
+		background: var(--bs-light);
+		
+		& .ve-select {
+			& span {
+				font-size: $font-size-base;
+				font-weight: $font-weight-bold;
+			}
+		}
+		& > div {
+			.dark-mode & {
+				filter: brightness(10);
+				color: var(--app-component-color);
+				
+				&.ve-divider {
+					opacity: .25;
+				}
+				&.ve-select {
+					border-right: 1px solid rgba($white, .25);
+				}
+			}
+			&:hover {
+				background: none;
+			
+				& i {
+					opacity: 1;
+				}
+			}
+		}
+		& .ve-active {
+			background: none !important;
+			
+			& i {
+				opacity: 1;
+			}
+		}
+	}
+	.mailbox .mailbox-input & {
+		height: auto !important;
+		min-height: rem(300px);
+		
+		@include flex(1);
+	}
+}
+
+
+/* Vue Input Tag */
+.vue-input-tag-wrapper {
+	border-color: var(--app-component-border-color) !important;
+	-webkit-appearance: none !important;
+	
+	.mailbox .mailbox-to & {
+		border: none !important;
+		padding: 0;
+		background: none;
+		
+		@include flex(1);
+		@if $enable-rtl {
+			padding-right: $spacer / 2;
+		} @else {
+			padding-left: $spacer / 2;
+		}
+		
+		& .new-tag {
+			margin-top: rem(4px);
+			margin-bottom: rem(4px);
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+			color: var(--app-component-color);
+		}
+		& .input-tag {
+			height: 24px;
+			font-weight: $font-weight-bold;
+			border-color: transparent !important;
+			background: var(--app-component-active-bg);
+			color: var(--app-component-active-color) !important;
+			padding: 4px 24px 4px 7px!important;
+			font-size: 12px !important;
+			margin: 5px 5px 5px 0 !important;
+			position: relative;
+	
+			@include display-inline-flex();
+			@include flex-align(center);
+			@include border-radius($border-radius !important);
+		
+			& span {
+				@include flex(1);
+			}
+			& .remove {
+				line-height: rem(24px) !important;
+				height: rem(24px);
+				text-indent: 999px;
+				position: absolute;
+				width: rem(20px);
+				color: $white !important;
+				right: 2px!important;
+				text-align: center!important;
+				top: 0!important;
+				margin: 0!important;
+				position: absolute;
+				text-decoration: none;
+	
+				@include fontawesome();
+	
+				&:before {
+					content: '\f00d';
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					text-indent: 0;
+				
+					@include display-flex();
+					@include flex-align(center);
+					@include flex-justify-content(center);
+				}
+			}
+		}
+	}
+	&.form-control {
+		height: auto;
+		min-height: $input-height;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		font-weight: $font-weight-bold;
+	
+		& .new-tag {
+			font-weight: $font-weight-bold;
+			color: var(--app-component-color);
+			margin: 4px 0 !important;
+			padding: 0 !important;
+			font-size: $font-size-base;
+		}
+		& .input-tag {
+			height: 22px;
+			font-weight: $font-weight-bold;
+			border-color: transparent !important;
+			background: var(--app-component-active-bg);
+			color: var(--app-component-active-color) !important;
+			padding: 2px 24px 2px 7px!important;
+			font-size: 12px !important;
+			margin: 2px 5px 2px 0 !important;
+			position: relative;
+	
+			@include display-inline-flex();
+			@include flex-align(center);
+			@include border-radius($border-radius !important);
+		
+			& span {
+				@include flex(1);
+			}
+			& .remove {
+				line-height: rem(22px) !important;
+				height: rem(22px);
+				text-indent: 999px;
+				position: absolute;
+				width: rem(20px);
+				color: $white !important;
+				right: 2px!important;
+				text-align: center!important;
+				top: 0!important;
+				margin: 0!important;
+				position: absolute;
+				text-decoration: none;
+	
+				@include fontawesome();
+	
+				&:before {
+					content: '\f00d';
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					text-indent: 0;
+				
+					@include display-flex();
+					@include flex-align(center);
+					@include flex-justify-content(center);
+				}
+			}
+		}
+		&.default .input-tag {
+			background: $gray-500 !important;
+		}
+		&.inverse .input-tag {
+			background: $gray-900 !important;
+		}
+		&.info .input-tag {
+			background: $cyan !important;
+		}
+		&.success .input-tag {
+			background: $teal !important;
+		}
+		&.warning .input-tag {
+			background: $warning !important;
+		}
+		&.danger .input-tag {
+			background: $danger !important;
+		}
+		&.white .input-tag {
+			background: #fff!important;
+			border-color: $gray-500 !important;
+			color: $gray-900 !important;
+		
+			& .remove {
+				color: $gray-900 !important;
+			}
+		}
+	}
+}
+
+
+/* Highlight JS */
+.hljs {
+	& .hljs-section, 
+	& .hljs-strong, 
+	& .hljs-tag {
+		font-weight: $font-weight-base;
+	}
+}
+
+
+/* Vue Notification */
+.vue-notification-group {
+	& .notification {
+		&.custom {
+			margin: rem(10px);
+			margin-bottom: 0;
+			align-items: center;
+			justify-content: center;
+			background: shade-color($success, 50%);
+			border: 1px solid $success;
+			box-sizing: border-box;
+			
+			@include border-radius($border-radius);
+			@include display-flex();
+		
+			& > div {
+				box-sizing: border-box;
+			}
+			& .custom-icon {
+				color: rgba($white, .5);
+				font-size: rem(32px);
+				padding: 0 $spacer * 1.5;
+				
+				& + .custom-content {
+					@if $enable-rtl {
+						padding-right: 0;
+					} @else {
+						padding-left: 0;
+					}
+				}
+			}
+			& .custom-close {
+				padding: 0 $spacer;
+				font-size: 16px;
+				opacity: 0.2;
+				cursor: pointer;
+			
+				&:hover {
+					opacity: 0.8;
+				}
+			}
+			& .custom-content {
+				padding: $spacer / 2 $spacer;
+				font-size: rem(13px);
+			
+				@include flex(1);
+			
+				& .custom-title {
+					letter-spacing: 1px;
+					text-transform: uppercase;
+					font-size: 10px;
+					font-weight: $font-weight-bold;
+					color: $success;
+				}
+			}
+		}
+	}
+	& .n-light {
+		margin: rem(10px);
+		margin-bottom: 0;
+		font-size: 13px;
+		padding: $spacer / 2 $spacer;
+		color: $blue-300;
+		background: shade-color($blue, 50%);
+		border: 1px solid $blue;
+		
+		@include border-radius($border-radius);
+
+		& .notification-title {
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-size: $font-size-sm;
+			margin-bottom: $spacer / 2;
+			font-weight: $font-weight-bold;
+			color: $blue;
+		}
+	}
+	& .vue-notification {
+		margin: 0 rem(10px) rem(10px);
+		
+		&.notification {
+			margin: 0 rem(10px) rem(10px);
+		}
+		&.error {
+			height: auto;
+		}
+		&.success {
+			background: shade-color($success, 30%);
+			border-left-color: var(--bs-success);
+		}
+		&.error {
+			background: shade-color($danger, 30%);
+			border-left-color: var(--bs-danger);
+		}
+		&.warn {
+			background: shade-color($warning, 30%);
+			border-left-color: var(--bs-warning);
+		}
+	}
+}
+
+
+/* Bootstrap Datetimepicker */
+.bootstrap-datetimepicker-widget {
+	&.dropdown-menu {
+		min-width: rem(260px);
+		
+		&:before {
+			display: none !important;
+		}
+	}
+	& .timepicker {
+		& .timepicker-picker {
+			& table {
+				& td {
+					padding: 0 !important;
+					height: rem(30px) !important;
+					line-height: rem(30px) !important;
+					
+					& a:hover i,
+					& .timepicker-hour:hover,
+					& .timepicker-minute:hover {
+						background: var(--app-component-dropdown-hover-bg);
+					}
+					& span, 
+					& i {
+						height: rem(30px) !important;
+						line-height: rem(30px) !important;
+					}
+					&.separator {
+						width: rem(20px) !important;
+					}
+				}
+			}
+		}
+		& .timepicker-minutes {
+			& .minute {
+				font-weight: $font-weight-bold;
+				width: rem(30px) !important;
+				height: rem(30px) !important;
+				line-height: rem(30px) !important;
+				
+				&:hover {
+					background: var(--app-component-dropdown-hover-bg);
+				}
+			}
+		}
+	}
+	& .datepicker {
+		& .datepicker-days,
+		& .datepicker-months,
+		& .datepicker-years,
+		& .datepicker-decades {
+			& .picker-switch,
+			& .day,
+			& .month,
+			& .year,
+			& .decade {
+				color: var(--app-component-dropdown-color);
+				
+				&:hover {
+					background-color: var(--app-component-dropdown-hover-bg);
+				}
+			}
+			& i,
+			& span {
+				margin: 1px;
+				width: calc(33% - 2px);
+				padding: rem(2px);
+				line-height: $line-height-base !important;
+				
+				@include display-inline-flex();
+				@include flex-align(center);
+				@include flex-justify-content(center);
+			}
+		}
+	}
+	& .btn {
+		color: var(--app-component-dropdown-color);
+	}
+	& .picker-switch a {
+		& i {
+			color: var(--app-component-dropdown-color);
+			
+			&:hover {
+				background-color: var(--app-component-dropdown-hover-bg);
+			
+			}
+		}
+	}
+	&.dropdown-menu.bottom:after {
+		border-bottom-color: var(--app-component-dropdown-bg);
+	}
+	&.dropdown-menu.top:after {
+		border-top-color: var(--app-component-dropdown-bg);
+	}
+	& .fa.fa-trash-o {
+		@include fontawesome();
+		
+		&:before {
+			content: '\f2ed';
+		}
+	}
+}
+
+
+/* Vue Datepicker */
+.vdp-datepicker {
+	& input[readonly] {
+		opacity: 1;
+	}
+	& .vdp-datepicker__calendar {
+		border: none;
+		padding: $spacer * .5;
+		background: var(--app-component-dropdown-bg);
+		color: var(--app-component-color);
+		
+		@include box-shadow(0 5px 30px 0 rgba(0,0,0,.25));
+		@include border-radius($border-radius-lg);
+		
+		& header {
+			line-height: rem(30px);
+			
+			& span {
+				font-size: $font-size-base;
+				font-weight: $font-weight-bolder;
+				color: var(--app-component-color);
+				
+				@include border-radius($border-radius);
+				
+				&:not(.disabled) {
+					&:hover,
+					&:focus {
+						background: var(--app-component-dropdown-hover-bg);
+					}
+				}
+				&.next:after,
+				&.prev:after {
+					content: '\f054';
+					text-indent: 0;
+					top: 0;
+					left: 0;
+					right: 0;
+					transform: none;
+					border: none;
+					
+					@include fontawesome();
+				}
+				&.prev:after {
+					content: '\f053';
+				}
+			}
+		}
+		& .cell {
+			height: rem(32px);
+			line-height: rem(32px);
+			color: var(--app-component-color);
+			border: none;
+			font-weight: $font-weight-bold;
+			
+			&.day-header {
+				font-size: $font-size-base;
+				font-weight: $font-weight-bolder;
+				color: var(--app-component-color);
+				height: rem(30px);
+			}
+			&:not(.blank):not(.disabled) {
+				&.day,
+				&.month,
+				&.year {
+					&:hover {
+						border: none;
+						background: var(--app-component-dropdown-hover-bg);
+						color: var(--app-component-color);
+						
+						@include border-radius($border-radius);
+					}
+				}
+			}
+			&.selected {
+				background: var(--app-component-active-bg) !important;
+				color: $white !important;
+				border: none;
+				
+				@include border-radius($border-radius);
+			}
+			&.month,
+			&.year {
+				height: rem(42px);
+				line-height: rem(42px);
+			}
+		}
+	}
+	&.inline {
+		& .vdp-datepicker__calendar {
+			box-shadow: none;
+			padding: 0;
+			min-width: 300px;
+			width: 100%;
+			background: none;
+			
+			@include box-shadow(none);
+		}
+	}
+}
+
+
+/* Vue Select */
+.v-select {
+	body & {
+		& .vs__dropdown-toggle {
+			border: 1px solid var(--app-component-border-color);
+			padding: 0;
+			
+			&:after {
+				display: none;
+			}
+		}
+		& .vs__actions {
+			padding: 0 rem(12px);
+			opacity: 0.75;
+			
+			&:after {
+				content: '\f078';
+				
+				@include fontawesome();
+			}
+			& .vs__clear {
+				opacity: .75;
+				color: var(--app-component-color);
+				
+				@if $enable-rtl {
+					margin-left: rem(15px);
+				} @else {
+					margin-right: rem(15px);
+				}
+				
+				&:after {
+					content: '\f00d';
+				
+					@include fontawesome();
+				}
+			}
+			& .vs__open-indicator,
+			& .vs__clear svg {
+				display: none;
+			}
+		}
+		& .vs__selected-options {
+			margin: 0 rem(5px);
+			color: var(--app-component-color);
+			
+			& .vs__selected {
+				margin: 0;
+				min-height: rem(32px);
+				color: var(--app-component-color);
+			}
+		}
+		& .vs__search {
+			height: rem(32px);
+			margin: 0;
+			padding: rem(5px);
+			border: none;
+			color: var(--app-component-color);
+		}
+		
+		& .vs__dropdown-menu {
+			padding: 0;
+			border: none;
+			background: var(--app-component-dropdown-bg);
+			
+			@include box-shadow($box-shadow);
+			
+			& .vs__dropdown-option {
+				padding: rem(8px) $dropdown-item-padding-x;
+				font-weight: $font-weight-bold;
+				color: var(--app-component-color);
+				
+				&.vs__dropdown-option--selected {
+					background: var(--app-component-active-bg);
+					color: var(--app-component-active-color);
+				}
+				&.vs__dropdown-option--highlight {
+					background: var(--bs-light);
+					color: var(--app-component-color);
+				}
+			}
+		}
+	}
+}
+
+
+/* Vue Colorpicker */
+.vue-colorpicker {
+	body & {
+		@include border-radius(0 !important);
+	}
+}
+.vue-colorpicker-panel {
+	body & {
+		& .vc-chrome,
+		& .vc-sketch {
+			background-color: var(--app-component-dropdown-bg);
+			
+			@include box-shadow($box-shadow);
+			
+			& .vc-chrome-body,
+			& .vc-sketch-field {
+				background-color: var(--app-component-dropdown-bg);
+				color: var(--app-component-color);
+				
+				& .vc-input__input {
+					background: var(--app-component-bg);
+					color: var(--app-component-color);
+					border: 1px solid var(--app-component-dropdown-border-color);
+					
+					@include box-shadow(none);
+				}
+				& .vc-input__label {
+					color: var(--app-component-color);
+				}
+			}
+			& .vc-sketch-presets {
+				border-color: var(--app-component-dropdown-border-color);
+			}
+		}
+	}
+}
+
+
+/* Vue Slider Component */
+.vue-slider {
+	& .vue-slider-process {
+		background: var(--app-component-active-bg);
+	}
+	& .vue-slider-dot-tooltip {
+		& .vue-slider-dot-tooltip-inner {
+			background: var(--app-component-dropdown-bg);
+			border-color: var(--app-component-dropdown-bg);
+			font-size: $font-size-base;
+			font-weight: $font-weight-bold;
+		}
+	}
+	& .vue-slider-dot-handle-focus {
+		border-color: var(--app-component-active-bg);
+		background-color: var(--app-component-active-bg);
+	}
+	& .vue-slider-dot-handle {
+		border-color: var(--app-component-active-bg);
+		background-color: var(--app-component-active-bg);
+	}
+	& .vue-slider-rail {
+		background: var(--app-component-secondary-bg);
+	}
+}
+
+
+/* Vue Good Table */
+.vgt-wrap {
+	& .vgt-inner-wrap {
+		@include box-shadow(none);
+		
+		& .vgt-global-search {
+			padding: $spacer / 1.25 $spacer;
+			background: var(--app-component-bg);
+			border: none;
+			
+			& .vgt-global-search__input {
+				padding: 0;
+				float: none !important;
+				
+				@include flex(1);
+				@include display-flex();
+				
+				& form {
+					display: block;
+					width: 100%;
+					
+					@include display-flex();
+				}
+				
+				& label {
+					background: var(--bs-light);
+					margin: 0;
+					padding: 0 $spacer / 1.5;
+					border: 1px solid var(--app-component-border-color);
+					
+					@include display-flex();
+					@include flex-align(center);
+					@if $enable-rtl {
+						border-left: none;
+						
+						@include border-top-left-radius($border-radius);
+						@include border-bottom-left-radius($border-radius);
+					} @else {
+						border-right: none;
+						
+						@include border-top-left-radius($border-radius);
+						@include border-bottom-left-radius($border-radius);
+					}
+					
+					& .input__icon {
+						position: relative;
+						width: rem(16px);
+						height: rem(16px);
+						line-height: 1;
+					
+						& .magnifying-glass {
+							margin: 0;
+							border: none;
+							font-size: rem(16px);
+							width: rem(16px);
+							height: rem(16px);
+							line-height: 1;
+							height: auto;
+						
+							@include fontawesome();
+						
+							&:before {
+								content: '\f002';
+								right: 0;
+								top: 0;
+								left: 0;
+								bottom: 0;
+								position: relative;
+								border: none;
+								background: none;
+							
+								@include transform(none);
+							}
+						}
+					}
+				}
+				& .vgt-input {
+					width: 100%;
+					height: rem(36px);
+					font-weight: $input-font-weight;
+					border-color: var(--app-component-border-color);
+					background: var(--app-component-bg);
+					color: var(--app-component-color);
+					font-size: $font-size-base;
+					
+					@include flex(1);
+					@include placeholder(#{rgba(var(--app-component-color-rgb), .5)});
+					@include transition(all .2s);
+					
+					@if $enable-rtl {
+						@include border-top-left-radius(0);
+						@include border-bottom-left-radius(0);
+					} @else {
+						@include border-top-left-radius(0);
+						@include border-bottom-left-radius(0);
+					}
+					&:focus {
+						border-color: $input-focus-border-color;
+						
+						@include box-shadow($input-focus-box-shadow);
+					}
+				}
+			}
+			& .vgt-global-search__actions {
+				margin: 0;
+			}
+		}
+		& .vgt-selection-info-row {
+			margin-bottom: 0;
+			
+			@include border-radius(0);
+		}
+		& .vgt-table {
+			font-size: $font-size-base;
+			border: none;
+			background: var(--app-component-bg);
+			
+			& thead,
+			& tbody {
+				& th,
+				& td {
+					border-color: $table-border-color;
+					color: var(--app-component-color);
+					
+					&:first-child {
+						@if $enable-rtl {
+							border-right: none;
+						} @else {
+							border-left: none;
+						}
+					}
+					&:last-child {
+						@if $enable-rtl {
+							border-left: none;
+						} @else {
+							border-right: none;
+						}
+					}
+				}
+				& th {
+					background: var(--bs-light);
+					
+					&.sortable {
+						& button {
+							&:before {
+								border: 4px solid transparent;
+								border-top: 4px solid rgba(var(--app-component-color-rgb), .5);
+								margin-top: 1px;
+							}
+							&:after {
+								border: 4px solid transparent;
+								border-bottom: 4px solid rgba(var(--app-component-color-rgb), .5);
+								margin-top: -9px;
+							}
+						}
+						&.sorting-asc {
+							& button {
+								&:after {
+									border-bottom-color: $blue;	
+								}
+							}
+						}
+						&.sorting-desc {
+							& button {
+								&:before {
+									border-top-color: $blue;	
+								}
+							}
+						}
+					}
+				}
+			}
+			& tbody {
+				& th {
+					background: none;
+				}
+			}
+		}
+		& .vgt-wrap__footer {
+			border: none;
+			background: none;
+			padding: $spacer / 1.5 $spacer;
+			float: none !important;
+			
+			& .footer__row-count {
+				@include flex(1);
+				@include display-flex();
+				
+				& form {
+					@include display-flex();
+					@include flex-align(center);
+					
+					& .footer__row-count__label {
+						font-size: $font-size-base;
+						white-space: nowrap;
+						font-weight: $font-weight-bold;
+						color: rgba(var(--app-component-color-rgb), .5);
+					}
+					& .footer__row-count__select {
+						display: block;
+						width: 100%;
+						padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
+						font-family: $form-select-font-family;
+						@include font-size($form-select-font-size);
+						font-weight: $form-select-font-weight;
+						line-height: $form-select-line-height;
+						color: $form-select-color;
+						background-color: $form-select-bg;
+						background-image: escape-svg($form-select-indicator);
+						background-repeat: no-repeat;
+						background-position: $form-select-bg-position;
+						background-size: $form-select-bg-size;
+						border: $form-select-border-width solid var(--app-component-border-color);
+						@include border-radius($border-radius);
+						appearance: none;
+						
+						&:focus {
+							border-color: $input-focus-border-color;
+							
+							@include box-shadow($input-focus-box-shadow);
+						}
+					}
+				}
+				&:after {
+					display: none;
+				}
+			}
+			& .footer__navigation {
+				float: none !important;
+				
+				@include flex(1);
+				@include display-flex();
+				@include flex-justify-content(flex-end);
+				@include flex-align(center);
+				
+				& .footer__navigation__page-info {
+					font-size: $font-size-base;
+					font-weight: $font-weight-bold;
+					color: rgba(var(--app-component-color-rgb), .5);
+				}
+				& .footer__navigation__page-btn {
+					border: 1px solid transparent;
+					display: inline-block;
+					font-family: $btn-font-family;
+					font-weight: $btn-font-weight;
+					line-height: $btn-line-height;
+					color: var(--app-component-color);
+					background: var(--app-component-bg);
+					min-width: rem(90px);
+					border: 1px solid var(--app-component-border-color);
+					
+					@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  				@include transition($btn-transition);
+  				@include display-flex();
+  				@include flex-align(center);
+  				@include flex-justify-content(center);
+  				
+  				&:hover {
+  					background: rgba(var(--app-component-color-rgb), .15);
+  				}
+					&.disabled {
+						background: none;
+					}
+					&:first-of-type {
+						@if $enable-rtl {
+							margin-left: rem(10px);
+						} @else {
+							margin-right: rem(10px);
+						}
+					}
+					& span {
+						font-size: $font-size-base;
+						
+						&.chevron {
+							width: auto;
+							height: auto;
+							font-size: rem(14px);
+							margin-top: rem(-1px);
+							margin-bottom: rem(-1px);
+							
+							@include fontawesome();
+							
+							&:after {
+								display: none;
+							}
+							&.left {
+								@if $enable-rtl {
+									margin-left: rem(6px);
+								
+									&:before {
+										content: '\f0da';
+									}
+								} @else {
+									margin-right: rem(6px);
+								
+									&:before {
+										content: '\f0d9';
+									}
+								}
+							}
+							&.right {
+								@if $enable-rtl {
+									margin-right: rem(6px);
+								
+									&:before {
+										content: '\f0d9';
+									}
+								} @else {
+									margin-left: rem(6px);
+								
+									&:before {
+										content: '\f0da';
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* Countdown */
+.countdown-section {
+	display: block;
+	text-align: center;
+	
+	.countdown-show1 & {
+		width: 98%;
+	}
+	.countdown-show2 & {
+		width: 48%;
+	}
+	.countdown-show3 & {
+		width: 32.5%;
+	}
+	.countdown-show4 & {
+		width: 24.5%;
+	}
+	.countdown-show5 & {
+		width: 19.5%;
+	}
+	.countdown-show6 & {
+		width: 16.25%;
+	}
+	.countdown-show7 & {
+		width: 14%;
+	}
+}
+.countdown-period {
+  display: block;
+}
+
+
+/* ins progress */
+.ins-progress {
+	background: var(--app-theme) !important;
+}
+
+
+/* Date Rangepicker */
+.vue-daterange-picker {
+	&.btn {
+		padding: 0;
+		
+		& .form-control {
+			color: inherit;
+			font-weight: inherit;
+			height: auto;
+			border: none;
+			background: none;
+		}
+	}
+	& .row {
+		margin: 0;
+		
+		@media (min-width: 992px) {
+			@include flex-wrap(nowrap);
+		}
+		@media (max-width: 991px) {
+			display: block;
+		}
+		
+		& > .calendars-container {
+			@media (min-width: 576px) {
+				@include display-flex();
+			}
+		}
+	}
+	& .daterangepicker {
+		@media (max-width: 520px) {
+			max-width: 340px;
+		}
+		@media (max-width: 420px) {
+			max-width: 320px;
+		}
+		@media (max-width: 380px) {
+			max-width: 280px;
+		}
+		& td.active,
+		& td.active:hover {
+			background: var(--app-component-active-bg);
+			color: var(--app-component-active-color) !important;
+		}
+		& .btn-primary,
+		& .btn-success {
+			background-color: $success;
+		}
+		&.show-ranges {
+			& .ranges {
+				@media (max-width: 991px) {
+					max-width: initial !important;
+				}
+				& ul {
+					@media (max-width: 767px) {
+						@include flex-wrap(nowrap);
+					}
+				}
+			}
+		}
+		& .drp-calendar .calendar-table table {
+			& thead,
+			& tbody {
+				& tr {
+					& td,
+					& th {
+						background: none;
+							
+						&:hover,
+						&:focus {
+							background: var(--app-component-dropdown-hover-bg);
+						}
+						&.in-range {
+							background: tint-color($component-active-bg, 85%);
+							color: var(--app-component-color);
+							
+							@include border-radius(0);
+							
+							.dark-mode & {
+								background: shade-color($component-active-bg, 50%);
+								
+								&.active {
+									background: $component-active-bg;
+								}
+							}
+						}
+						&.active {
+							background: $component-active-bg;
+							color: $white;
+						}
+						&.start-date {
+							@include border-radius($border-radius 0 0 $border-radius);
+						}
+						&.end-date {
+							@include border-radius(0 $border-radius $border-radius 0);
+						}
+						&.off {
+							background: none;
+							color: var(--app-component-disabled-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}

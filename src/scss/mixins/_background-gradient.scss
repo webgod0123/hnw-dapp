@@ -1,0 +1,14 @@
+@mixin background-gradient($className, $from, $to) {
+	.#{$className},
+	.#{$className}-to-right,
+	.#{$className}-diagonal-down,
+	.#{$className}-diagonal-up {
+		background-image: $from;
+	}
+	.#{$className} {
+		background-image: -moz-linear-gradient(to bottom, $from 0%, $to 100%) !important;
+		background-image: -webkit-linear-gradient(to bottom, $from 0%, $to 100%) !important;
+		background-image: linear-gradient(to bottom, $from 0%, $to 100%) !important;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 ) !important;
+	}
+}
