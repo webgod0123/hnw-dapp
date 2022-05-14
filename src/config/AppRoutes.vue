@@ -16,11 +16,13 @@ import HfuelMigrate from "../pages/Hfuel/Migrate";
 
 import CampaignBasics from "../pages/Campaign/Basics.vue";
 import CampaignContent from "../pages/Campaign/Content.vue";
-import CampaignPerks from "../pages/Campaign/Perks.vue";
+import CampaignPerks from "../pages/Campaign/Perks/Perks.vue";
 import CampaignTeam from "../pages/Campaign/Team.vue";
 import CampaignFunding from "../pages/Campaign/Funding.vue";
 // import CampaignExtras from "../pages/Campaign/Extras.vue";
 import CampaignSettings from "../pages/Campaign/Settings.vue";
+import PerkCreate from "../pages/Campaign/Perks/Perk.vue";
+import PerkUpdate from "../pages/Campaign/Perks/PerkUpdate.vue";
 
 const routes = [
   { path: "*", redirect: "/dashboard" },
@@ -45,6 +47,8 @@ const routes = [
   { path: "/campaign_edit/funding", component: CampaignFunding },
   // { path: "/campaign_edit/extras", component: CampaignExtras },
   { path: "/campaign_edit/settings", component: CampaignSettings },
+  { path: "/campaign_edit/perks/create", component: PerkCreate },
+  { path: "/campaign_edit/perks/:title/update", component: PerkUpdate },
 ];
 
 export default routes;

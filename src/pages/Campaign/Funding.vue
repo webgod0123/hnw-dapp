@@ -1,6 +1,6 @@
 <template>
   <div>
-    <campaign-breadcrumb :title="title" />
+    <campaign-breadcrumb :home="home" :title="title" />
   </div>
 </template>
 
@@ -10,6 +10,7 @@ export default {
   components: { CampaignBreadcrumb },
   data() {
     return {
+      home: 'Campaign',
       title: "Funding",
     };
   },

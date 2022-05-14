@@ -1,6 +1,6 @@
 <template>
   <div>
-    <campaign-breadcrumb :title="pageTitle" />
+    <campaign-breadcrumb :title="pageTitle" :home="'Campaign'" @saveCampaign="save" />
     <div class="card bg-dark text-white p-4 mt-4">
       <div class="row">
         <div class="col-12 col-lg-10">
@@ -55,7 +55,11 @@
                 Upload a square image that represents your campaign. 640 x 640
                 recommended resolution, 220 x 220 minimum resolution.
               </div>
-              <upload @image="getImage" :image="cardImage" />
+              <upload
+                @image="getImage"
+                :image="cardImage"
+                :className="'upload-card-image'"
+              />
               <span class="error-message" v-if="errors.cardImage">{{
                 errors.cardImage
               }}</span>
@@ -155,7 +159,9 @@
               }}</span>
             </div>
           </div>
-          <div class="d-flex justify-content-end">
+          <div
+            class="d-flex justify-content-end save-content border-top border-primary w-100"
+          >
             <button class="btn btn-primary text-white fs-6" @click="save">
               Save & Continue
             </button>
@@ -167,14 +173,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import vSelect from "vue-select";
-import "vue-select/dist/vue-select.css";
 import Upload from "../../components/Upload.vue";
 import CampaignBreadcrumb from "../../components/CampaignBreadcrumb.vue";
 import { mapState, mapActions } from "vuex";
-
-Vue.component("v-select", vSelect);
 
 export default {
   components: { Upload, CampaignBreadcrumb },
@@ -287,7 +288,13 @@ export default {
       if (isValid) {
         this.$router.push("/campaign_edit/content");
       } else {
-        alert("error");
+        if (!isValid) {
+          this.showAlert({
+            type: "error",
+            title: "Error",
+            html: "Please fix the issues!",
+          });
+        }
       }
     },
     validateData: function () {
@@ -296,37 +303,46 @@ export default {
       if (!this.title) {
         isValid = false;
         this.errors.title = "Title is required";
-      }
+      } else this.errors.title = "";
       if (!this.tagline) {
         isValid = false;
         this.errors.tagline = "Tagline is required";
-      }
+      } else this.errors.tagline = "";
       if (!this.cardImage) {
         isValid = false;
         this.errors.cardImage = "Card image is required";
-      }
+      } else this.errors.cardImage = "";
       if (!this.country) {
         isValid = false;
         this.errors.country = "Country is required";
-      }
+      } else this.errors.country = "";
       if (!this.city) {
         isValid = false;
         this.errors.city = "City is required";
-      }
+      } else this.errors.city = "";
       if (!this.category) {
         isValid = false;
         this.errors.category = "Category is required";
-      }
+      } else this.errors.category = "";
       if (this.tags.length === 0) {
         isValid = false;
         this.errors.tags = "You need at least 1 campaign tag";
-      }
+      } else this.errors.tags = "";
       if (!this.duration) {
         isValid = false;
         this.errors.duration = "Duration is required";
-      }
+      } else this.errors.duration = "";
 
       return isValid;
+    },
+    showAlert: function ({ title = "", type = "", html = "" }) {
+      this.$swal.fire({
+        icon: type,
+        title,
+        html,
+        showConfirmButton: true,
+        timer: 3000,
+      });
     },
   },
 };

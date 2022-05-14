@@ -1,5 +1,5 @@
 <template>
-  <div class="upload-content border border-primary">
+  <div class="upload-content border border-primary" :class="className">
     <div class="d-flex align-items-center" v-if="!image">
       <div class="icon d-flex"><img src="/assets/img/icons/icons8-camera-50.png" /></div>
       <span class="fs-4 ms-2">Upload Image</span>
@@ -22,6 +22,10 @@
 export default {
   props: {
     image: {
+      type: String,
+      default: ''
+    },
+    className: {
       type: String,
       default: ''
     }
@@ -47,12 +51,25 @@ export default {
 
 <style>
 .upload-content {
-  width: 400px;
-  height: 400px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.upload-card-image {
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+}
+
+.upload-pitch-image {
+  max-width: 695px;
+  aspect-ratio: 695 / 460;
+}
+
+.upload-perk-image {
+  max-width: 330px;
+  aspect-ratio: 330 / 220;
 }
 
 .file-input {

@@ -55,6 +55,7 @@
     "vue-notification": "^1.3.20",
     "vue-nvd3": "^1.0.0",
     "vue-pop-colorpicker": "^1.0.2",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.5.3",
     "vue-select": "^3.18.3",
     "vue-slider-component": "^3.2.15",
